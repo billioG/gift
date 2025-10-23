@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitación interactiva Hello Kitty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: linear-gradient(135deg, #fcbad3 0%, #fff 100%);
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', 'Montserrat', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: #fff7fa;
+      box-shadow: 0 10px 32px rgba(225, 150, 163, 0.2);
+      border-radius: 20px;
+      padding: 32px 28px;
+      max-width: 350px;
+      text-align: center;
+      position: relative;
+    }
+    .kitty-img {
+      width: 90px;
+      border-radius: 100px;
+      box-shadow: 0 3px 10px #e19ca3;
+      margin-bottom: 10px;
+      transition: transform 0.3s;
+    }
+    .kitty-img:hover {
+      transform: scale(1.1) rotate(-3deg);
+    }
+    h2 {
+      color: #f095c7;
+      margin-bottom: 12px;
+    }
+    .info {
+      color: #a9477e;
+      margin: 10px 0;
+      font-weight: 500;
+      font-size: 17px;
+    }
+    .sorpresa {
+      display: none;
+      margin: 15px 0;
+      font-size: 16px;
+      color: #e15b9f;
+      animation: fadeIn 1.3s forwards;
+    }
+    .btn {
+      background: #ffd6e0;
+      color: #f2559f;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      box-shadow: 0 2px 4px #fff;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #fab3d5; }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/03/c5/03/03c5031bb32a25c24232c66ec6b93d6d.jpg" alt="Hello Kitty" class="kitty-img">
+    <h2>¡Invitación especial para Alexandra!</h2>
+    <div class="info">Fecha: <strong>24 de octubre</strong></div>
+    <div class="info">Hora: <strong>2:00 p.m.</strong></div>
+    <div class="info">Lugar: <button class="btn" onclick="mostrarSorpresa()">Ver sorpresa</button></div>
+    <div id="lugarSorpresa" class="sorpresa">✨ Sorpresa ✨<br>Solo lo descubrirás ese día 💖</div>
+  </div>
+  <script>
+    function mostrarSorpresa() {
+      document.getElementById('lugarSorpresa').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
